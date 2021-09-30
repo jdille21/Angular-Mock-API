@@ -7,6 +7,7 @@ import images from './core/constants/images.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   cards: Array<any>=images;
 
   constructor() {
