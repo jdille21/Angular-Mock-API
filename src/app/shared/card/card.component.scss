@@ -1,0 +1,16 @@
+.card {
+    $card--width: calc(25vw - 3em);
+    $card-image--width: calc(#{$card--width} - 2em);
+
+    max-width: $card--width;
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    img {
+        width: $card-image--width;
+        height: $card-image--width;
+        border-radius: 50%;
+        margin: 1em;
+    }
+}

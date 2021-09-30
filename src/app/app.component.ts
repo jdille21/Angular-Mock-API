@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import images from './core/constants/images.json';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mock-demo';
+  cards: Array<any>=images;
+
+  constructor() {
+    console.log(images);
+  }
 }
