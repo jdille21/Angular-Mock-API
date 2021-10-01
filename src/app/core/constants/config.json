@@ -1,0 +1,6 @@
+{
+  "features": { },
+  "paths": {
+    "images": "/assets/mock-data/images.json"
+  }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import images from './core/constants/images.json';
+import { ApiHandlerService } from './core/services/api-handler.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,14 @@ import images from './core/constants/images.json';
 })
 export class AppComponent {
   
-  cards: Array<any>=images;
+  cards: Array<any>=[];
 
-  constructor() {
-    console.log(images);
+  constructor(
+    private apiHandler: ApiHandlerService
+  ) {
+    this.apiHandler.images.subscribe((data:Array<any>)=>{
+      this.cards=data;
+    });
+    this.apiHandler.getImagesJson();
   }
 }
